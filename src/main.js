@@ -9,6 +9,7 @@ $(document).ready(function(){
     var log = $("#log").val();
     var userInput = new Entry(title,log);
 
+    $('#results').append("<li>" + "Title: " + title + "</li>");
     $('#results').append("<li>" + "Vowel: " + userInput.vowelCounter() + "</li>");
     $('#results').append("<li>" + "Consanants: " + userInput.consonantCounter() + "</li>");
     $('#results').append("<li>" + "Word Counter: " + userInput.wordCounter() + "</li>");

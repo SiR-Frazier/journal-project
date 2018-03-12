@@ -19,6 +19,7 @@ Entry.prototype.wordCounter = function() {
 };
 
 Entry.prototype.getTeaser = function() {
-  var userInput = this.entryLog.split(/\s+/).slice(0,8).join(" ");
+  var regex = this.entryLog.match(/(.*?)[.?!]/g);
+  var userInput = regex[0].split(/\s+/).slice(0,8).join(" ");
   return userInput;
 };

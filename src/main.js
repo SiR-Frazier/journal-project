@@ -5,13 +5,14 @@ $(document).ready(function(){
   $("#journal-form").submit(function(event) {
     event.preventDefault();
     var title = $("#title").val();
+    console.log("title");
     var log = $("#log").val();
-    var newEntry = new Entry(title,log);
+    var userInput = new Entry(title,log);
 
-    $('#results').append("<li>" + "Vowel: " + newEntry.vowelCounter() + "</li>");
-    $('#results').append("<li>" + "Consanants: " + newEntry.consonantCounter() + "</li>");
-    $('#results').append("<li>" + "Word Counter: " + newEntry.wordCounter() + "</li>");
-    $('#results').append("<li>" + "Teaser: " + newEntry.getTeaser() + "</li>");
+    $('#results').append("<li>" + "Vowel: " + userInput.vowelCounter() + "</li>");
+    $('#results').append("<li>" + "Consanants: " + userInput.consonantCounter() + "</li>");
+    $('#results').append("<li>" + "Word Counter: " + userInput.wordCounter() + "</li>");
+    $('#results').append("<li>" + "Teaser: " + userInput.getTeaser() + "</li>");
   });
 });
 // newEntry.forEach(function(log) {

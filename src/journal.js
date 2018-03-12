@@ -4,17 +4,21 @@ export function Entry(title, log) {
 }
 
 Entry.prototype.vowelCounter = function () {
-  var inputtedLog = this.entryLog.match(/[aeiou]/gi).length;
+  var userInput = this.entryLog.match(/[aeiou]/gi).length;
+  return userInput;
 };
 
 Entry.prototype.consonantCounter = function() {
-  var inputtedLog = this.entryLog.match(/[bcdfghjklmnpqrstvxzwy]/gi).length;
+  var userInput = this.entryLog.match(/[bcdfghjklmnpqrstvxzwy]/gi).length;
+  return userInput;
 };
 
 Entry.prototype.wordCounter = function() {
-  var inputtedLog = this.entryLog.split(' ').length;
+  var userInput = this.entryLog.split(' ').length;
+  return userInput;
 };
 
 Entry.prototype.getTeaser = function() {
-  var inputtedLog = this.entryLog.split(/\s+/).slice(0,8);
+  var userInput = this.entryLog.split(/\s+/).slice(0,8);
+  return userInput;
 };
